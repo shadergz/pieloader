@@ -1,10 +1,11 @@
 cmake_minimum_required(VERSION 3.21)
 
 target_sources(pie PRIVATE
-    waveform.cpp
-    waveform.h
+    wavefront.cpp
+    wavefront.h
     types.h
 
+    loader.cpp
     include/pie/loader.h
 )
 target_include_directories(pie PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
