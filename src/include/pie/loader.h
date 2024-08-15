@@ -19,11 +19,12 @@ namespace pie {
         explicit Loader(const std::filesystem::path& model, const std::filesystem::path& assets = "./");
 
         void read(ModelInfo& info) const;
-        bool inferModelFormat();
+        void inferModelFormat();
 
         ProbHeader infer;
     private:
         void validateFbxModel();
+        void validateObjModel();
         std::fstream io;
     };
 }
